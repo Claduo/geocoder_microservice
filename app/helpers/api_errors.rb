@@ -11,4 +11,7 @@ module ApiErrors
     end
   end
 
+  error Validations::InvalidParams do
+    error_response(I18n.t(:missing_parameters, scope: 'api.errors'), 422)
+  end
 end

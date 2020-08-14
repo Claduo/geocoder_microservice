@@ -1,0 +1,2 @@
+app:
+  geo_data_file_path: spec/fixtures/city.csv
