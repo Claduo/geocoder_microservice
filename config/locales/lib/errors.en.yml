@@ -1,0 +1,5 @@
+en:
+  lib:
+    errors:
+      geocoder:
+        geo_data_not_found: "Geodata for city '%{city}' not found"

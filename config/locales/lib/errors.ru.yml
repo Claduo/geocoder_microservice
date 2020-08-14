@@ -1,0 +1,5 @@
+en:
+  lib:
+    errors:
+      geocoder:
+        geo_data_not_found: "Геоданные для города '%{city}' не найдены"
