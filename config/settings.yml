@@ -1,2 +1,4 @@
 app:
   geo_data_file_path: db/csv_data/city.csv
+rabbitmq:
+  consumer_pool: 10
