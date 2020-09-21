@@ -48,7 +48,7 @@ module AdsService
             options.merge(
                 reply_to: @reply_queue.name,
                 correlation_id: @correlation_id,
-                app_id: 'geocoder')
+                app_id: Settings.app.name)
         )
         @condition.wait(@lock)
       end

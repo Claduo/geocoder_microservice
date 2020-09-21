@@ -7,7 +7,13 @@ module Geocoder
   def coordinates(city)
     geo_data = geocode_data.find {|row| row['city'] == city}
     return {errors: I18n.t(:geo_data_not_found, scope: 'lib.errors.geocoder', city: city)} if geo_data.nil?
-    { geo_data: {lat: geo_data['geo_lat'].to_f, lon: geo_data['geo_lon'].to_f} }
+    coordinates = {lat: geo_data['geo_lat'].to_f, lon: geo_data['geo_lon'].to_f}
+    Application.logger.info(
+        "Coordinates for '#{city}'",
+        city: city,
+        geo_data: coordinates
+    )
+    { geo_data: coordinates }
   end
 
   private
