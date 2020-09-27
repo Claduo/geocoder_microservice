@@ -2,6 +2,9 @@ app:
   name: GEOCODER
   geo_data_file_path: db/csv_data/city.csv
 rabbitmq:
+  host: <%= ENV['RABBITMQ_HOST'] %>
+  username: <%= ENV['RABBITMQ_USER'] %>
+  password: <%= ENV['RABBITMQ_PASSWORD'] %>
   consumer_pool: 10
 logger:
   path: log/app.log
